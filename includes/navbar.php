@@ -7,16 +7,16 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav me-auto mb-2 mb-md-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
+          <a class="nav-link active" aria-current="page" href="<?php echo $URL_WEB ?>index.php">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="ejercicio1.php">Sesiones</a>
+          <a class="nav-link" href="<?php echo $URL_WEB ?>ejercicios/ejercicio1.php">Sesiones</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="ejercicio2.php">Cookies</a>
+          <a class="nav-link " href="<?php echo $URL_WEB ?>ejercicios/ejercicio2.php">Cookies</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="ejercicio3.php">Tabla</a>
+          <a class="nav-link" href="<?php echo $URL_WEB ?>ejercicios/ejercicio3.php">Tabla</a>
         </li>
       </ul>
       <form class="d-flex" role="search">

@@ -1,5 +1,5 @@
-<?php include 'cabecera.php' ?>
-<?php include 'navbar.php' ?>
+<?php include '../includes/cabecera.php' ?>
+<?php include '../includes/navbar.php' ?>
 
   <div class="bg-light p-5 rounded">
     <h1 class="mt-3 mb-3">Listar datos de la BD</h1>
@@ -59,4 +59,4 @@
   
   </div>
 
-  <?php include 'footer.php' ?>
+  <?php include '../includes/footer.php' ?>
