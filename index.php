@@ -1,5 +1,6 @@
 <?php include 'includes/cabecera.php' ?>
 <?php include 'includes/navbar.php' ?>
+<?php include 'includes/alerta.php' ?>
 
   <div class="bg-light p-5 rounded">
     <h1>Página Inicio 222</h1>
