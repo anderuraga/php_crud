@@ -25,10 +25,7 @@
       </form>
 
       <?php 
-
-        session_start();
-
-        // Usuario No Logeado        
+       // Usuario No Logeado        
         if (!isset($_SESSION['usuario'])) {
       ?>
           
