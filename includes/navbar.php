@@ -24,7 +24,31 @@
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
 
-      <a href="login.php" class="btn btn-outline-primary">Iniciar Sesión</a>
+      <?php 
+
+        session_start();
+
+        // Usuario No Logeado        
+        if (!isset($_SESSION['usuario'])) {
+      ?>
+          
+          <a href="login.php" class="btn btn-outline-primary">Iniciar Sesión</a>
+
+      <?php
+        // Usuario Logeado
+        }else {
+
+          // mostrar el usuario
+          echo "<p class='text-danger'>".$_SESSION['usuario']."</p>";
+
+      ?>
+
+          <a href="logout.php" class="btn btn-outline-danger">Cerrar Sesión</a>
+      <?php
+        } 
+      ?>
+
+     
 
     </div>
   </div>
