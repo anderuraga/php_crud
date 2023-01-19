@@ -29,18 +29,17 @@
         if (!isset($_SESSION['usuario'])) {
       ?>
           
-          <a href="login.php" class="btn btn-outline-primary">Iniciar Sesión</a>
+          <a href="<?php echo $URL_WEB ?>login.php" class="btn btn-outline-primary">Iniciar Sesión</a>
 
       <?php
         // Usuario Logeado
         }else {
-
-          // mostrar el usuario
-          echo "<p class='text-danger'>".$_SESSION['usuario']."</p>";
-
       ?>
-
-          <a href="logout.php" class="btn btn-outline-danger">Cerrar Sesión</a>
+        <div class="user-info mr-2 ml-2 p-2">
+          <p class="text-danger"><?php echo $_SESSION['usuario'] ?></p>
+          <img class="rounded-circle avatar" alt="avatar " src="https://www.fakepersongenerator.com/Face/male/male1085267201264.jpg" />
+          <a href="<?php echo $URL_WEB ?>logout.php" class="btn btn-outline-danger">Cerrar Sesión</a>
+        </div>  
       <?php
         } 
       ?>
