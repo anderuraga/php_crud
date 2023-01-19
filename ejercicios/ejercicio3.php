@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php include '../includes/cabecera.php' ?>
 <?php include '../includes/navbar.php' ?>
 

@@ -19,10 +19,7 @@
           <a class="nav-link" href="<?php echo $URL_WEB ?>ejercicios/ejercicio3.php">Tabla</a>
         </li>
       </ul>
-      <form class="d-flex mr-4" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+
 
       <?php 
        // Usuario No Logeado        
