@@ -11,10 +11,9 @@
     <table class="table">
         <thead>
             <tr>
-            <th scope="col">#</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Apellidos</th>
-            <th scope="col">Lorem</th>
+              <th scope="col">#</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Apellidos</th>            
             </tr>
         </thead>
         <tbody>
@@ -41,9 +40,9 @@
 
                   ?>
                     <tr>
-                        <th scope="row"><?php echo $row["id"] ?> </th>
-                        <td colspan="2"><?php echo $row["nombre"] ?></td>
-                        <td><?php echo $row["apellidos"] ?></td>
+                        <td> <?php echo $row["id"] ?> </td>
+                        <td> <?php echo $row["nombre"] ?></td>
+                        <td> <?php echo $row["apellidos"] ?></td>
                     </tr>
 
                   <?php                  
