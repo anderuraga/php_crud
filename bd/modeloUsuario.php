@@ -24,6 +24,28 @@ class ModeloUsuario {
         
     }// login
 
+    /**
+     * Actualiza la contraseña para un usuario
+     * retorna true si la cambia
+     * retorna false si NO la cambia
+     */
+    public static function cambiarPass( $idUsuario, $passOld, $passNew ){
+        include 'conexion.php';
+        $sql = "UPDATE usuarios 
+                SET pass = '".$passNew."' 
+                WHERE id = ".$idUsuario." AND pass='".$passOld."' ;
+                ";
+
+        $conn->query($sql);  
+
+        if ( $conn->affected_rows == 1 ){
+            return true;
+        }else{
+            return false;
+        }
+        
+    }// cambiarPass
+
 
 }
 ?>

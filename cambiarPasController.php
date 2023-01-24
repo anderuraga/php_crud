@@ -1,24 +1,39 @@
 <?php
+session_start();
+require_once("bd/modeloUsuario.php");
 
 /**
  * Controlador para cambiar la contraseña del usuario* 
  */
 
 
+
+// recoger parametros del formulario
 $pwdold = $_POST['pwdold'];
 $pwd1 = $_POST['pwd1'];
 $pwd2 = $_POST['pwd2'];
 
-//echo "pwdold=".$pwdold." pwd1=".$pwd1." pwd2=".$pwd2; 
+// recuperar usuario de session
+$usuario = $_SESSION['usuario'];
+$idUsuario = $usuario['id'];
 
+
+//logica de negocio
 if ( $pwdold != "" && $pwd1 != "" && $pwd2 != "" )
 {
     //comprobar contraseñas iguales
     if ( $pwd1 == $pwd2 ){
-        $msg = "Contraseña Cambiada";
-        $tipo = "primary";
+       
 
         // llamar al Modelo para cambiar en la BBDD
+        if ( ModeloUsuario::cambiarPass($idUsuario,$pwdold, $pwd1 ) ){
+            $msg = "Contraseña Cambiada";
+            $tipo = "primary";
+        }else{
+            $msg = "Contraseña Antigua no es correcta";
+            $tipo = "warning";
+        }
+
 
 
     }else{

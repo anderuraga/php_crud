@@ -39,7 +39,7 @@ $usuario = $_SESSION['usuario'];
                 <input type="password" placeholder="Repite contraseña nueva" class="form-control" name="pwd2">    
             </div>
 
-            <button type="submit" class="btn btn-primary">Cambiar</button>
+            <button type="submit" class="btn mb-2 btn-primary">Cambiar</button>
 
         </form>
       </div>
