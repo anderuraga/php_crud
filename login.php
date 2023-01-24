@@ -7,14 +7,14 @@
     <form action="loginController.php" method="post">
         <div class="mb-3">
             <label class="form-label">Nombre</label>
-            <input value="admin" 
+            <input value="" 
                 type="text" class="form-control" 
                 name="nom">
             
         </div>
         <div class="mb-3">
             <label class="form-label">Contraseña</label>
-            <input value="123" 
+            <input value="" 
                 type="password" 
                 class="form-control" 
                 name="pwd">    

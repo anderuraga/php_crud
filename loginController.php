@@ -7,7 +7,7 @@ require_once("bd/modeloUsuario.php");
 $nom = $_POST['nom'];
 $pwd = $_POST['pwd'];
 
-$usuario = ModeloUsuario::login( $nom, $pwd ) ;
+$usuario = ModeloUsuario::login( $nom, $pwd );
 if ( $usuario != null )
 {
     // guardar el usuario en session        
