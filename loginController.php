@@ -15,7 +15,7 @@ if ( $usuario != null )
 
     // Ir al index.php
     $msg = "Ongi Etorri";
-    header("Location: index.php?msg=".$msg."&tipo=primary");
+    header("Location: frontoffice.php?msg=".$msg."&tipo=primary");
 }
 else
 {

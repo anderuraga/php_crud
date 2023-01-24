@@ -33,6 +33,7 @@
         }else {
       ?>
         <div class="user-info mr-2 ml-2 p-2">
+          <a href="<?php echo $URL_WEB ?>frontoffice.php" class="btn btn-link">Tu Panel</a>
           <p class="text-danger">
             <?php echo $_SESSION['usuario']['nombre'] ?>,
             <?php echo $_SESSION['usuario']['apellidos'] ?>
