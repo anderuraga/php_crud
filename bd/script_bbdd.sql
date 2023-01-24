@@ -1,3 +1,11 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 24-01-2023 a las 16:46:19
+-- Versión del servidor: 10.4.27-MariaDB
+-- Versión de PHP: 8.0.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -22,18 +30,20 @@ SET time_zone = "+00:00";
 CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL,
   `nombre` varchar(50) NOT NULL,
-  `apellidos` varchar(50) NOT NULL
+  `apellidos` varchar(50) NOT NULL,
+  `nick` varchar(50) NOT NULL,
+  `pass` varchar(150) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `nombre`, `apellidos`) VALUES
-(1, 'Encarni', 'Pues los siyus'),
-(2, 'Eufrasio', 'Dolores Fuertes de Barriga'),
-(3, 'Pepe', 'Prieto'),
-(4, 'Mario', 'Brochas');
+INSERT INTO `usuarios` (`id`, `nombre`, `apellidos`, `nick`, `pass`) VALUES
+(1, 'Encarni', 'Pues los siyus', 'empanadillas', '123'),
+(2, 'Eufrasio', 'Dolores Fuertes de Barriga', 'frasco', '123'),
+(3, 'Pepe', 'Prieto', 'pepe', '123'),
+(4, 'Mario', 'Brochas', 'bros', '123');
 
 --
 -- Índices para tablas volcadas
@@ -43,7 +53,8 @@ INSERT INTO `usuarios` (`id`, `nombre`, `apellidos`) VALUES
 -- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `nick` (`nick`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
