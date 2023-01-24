@@ -2,13 +2,15 @@
 
 session_start();
 
+require_once('bd/modeloUsuario.php');
+
+
 // recoger parametros del formulario
 $nom = $_POST['nom'];
 $pwd = $_POST['pwd'];
 
-// echo $nom." ".$pwd;
-// TODO validar contra la bbdd,ya no vale "admin" y "123"
-if( "admin" == $nom && "123" == $pwd )
+// if( "admin" == $nom && "123" == $pwd )
+if ( ModeloUsuario::login($nom, $pwd) )
 {
 
     // guardar el usuario en session    
