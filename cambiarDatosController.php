@@ -41,6 +41,7 @@ if ( $nombre != "" && $apellidos != "" ) {
 
 }
 
+// vamos a una vista
 header("Location: frontoffice.php?msg=".$msg."&tipo=".$tipo);
 
 
