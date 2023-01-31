@@ -18,17 +18,8 @@
         </thead>
         <tbody>
         <?php
-              $servername = "localhost";
-              $username = "root";
-              $password = "";
-              $dbname = "uf1845";
-
-              // Create connection
-              $conn = new mysqli($servername, $username, $password, $dbname);
-              // Check connection
-              if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-              }
+            
+              include '../bd/conexion.php';
 
               $sql = "SELECT id, nombre, apellidos FROM usuarios ORDER BY nombre ASC;";
               // ejecuta la SQL y obtenermos resultados
