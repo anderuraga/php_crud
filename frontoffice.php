@@ -19,8 +19,13 @@ $usuario = $_SESSION['usuario'];
       <div class="col border border-primary">
         <h2>Tus Datos</h2>
         <p><b>Id:</b> <?php echo $usuario['id'] ?></p>
-        <p><b>Nombre:</b> <?php echo $usuario['nombre'] ?></p>
-        <p><b>Apellidos:</b> <?php echo $usuario['apellidos'] ?></p>
+
+        <form action="cambiarDatosController.php" method="post">
+          <p><b>Nombre:</b> <input type="text" name="nombre" value="<?php echo $usuario['nombre'] ?>"></p>
+          <p><b>Apellidos:</b> <input type="text" name="apellidos" value="<?php echo $usuario['apellidos'] ?>"></p>
+          <button type="submit" class="btn mb-2 btn-primary">Modificar</button>
+        </form>
+
         <p><b>Nick:</b> <?php echo $usuario['nick'] ?></p>
       </div>
 
