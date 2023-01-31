@@ -4,7 +4,7 @@
 <?php include 'includes/alerta.php' ?>
 
 <div class="bg-light p-5 rounded">
-    <form action="loginController.php" method="post">
+    <form action="<?php echo $URL_WEB ?>controller/loginController.php" method="post">
         <div class="mb-3">
             <label class="form-label">Nombre</label>
             <input value="" 

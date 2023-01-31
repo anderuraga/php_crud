@@ -19,7 +19,7 @@
         <tbody>
         <?php
             
-              include '../bd/conexion.php';
+              include '../../modelo/conexion.php';
 
               $sql = "SELECT id, nombre, apellidos FROM usuarios ORDER BY nombre ASC;";
               // ejecuta la SQL y obtenermos resultados

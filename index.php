@@ -1,8 +1,8 @@
 <?php session_start(); ?>
 
-<?php include 'includes/cabecera.php' ?>
-<?php include 'includes/navbar.php' ?>
-<?php include 'includes/alerta.php' ?>
+<?php include 'view/includes/cabecera.php' ?>
+<?php include 'view/includes/navbar.php' ?>
+<?php include 'view/includes/alerta.php' ?>
 
   <div class="bg-light p-5 rounded">
     <h1>Página Inicio</h1>
@@ -10,4 +10,4 @@
     <a class="btn btn-lg btn-primary" href="/docs/5.3/components/navbar/" role="button">View navbar docs &raquo;</a>
   </div>
 
-  <?php include 'includes/footer.php' ?>
+  <?php include 'view/includes/footer.php' ?>
