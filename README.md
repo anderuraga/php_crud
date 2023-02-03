@@ -13,12 +13,7 @@ Projecto PHP para aprender ha ralizar un CRUD contra una base datos de MySQL.
 2. Descomprimir el proyecto en la carpeta **C:\xampp\htdocs**
 3. Renombrar el nombre de proyecto de **php_crud-master** a **php_crud**, si quieres usar otro nombre de proyecto hay que cambiar la variable **$URL_WEB** en el fichero **/view/includes/cabecera.php**
 ```
-<?php
-
-    // Url para con el nomrbe del proyecto para usar en los enlaces
     $URL_WEB = "/php_crud/";
-
-?>
 ```
 4. [Abrir PHPMyAdmin](http://localhost/phpmyadmin) y crear la base de datos **uf1845**
 5. si quieres usar otro nombre de base datos o usuarios puedes cambiarlo en el fichero **modelo/conexion.php**
@@ -50,6 +45,6 @@ Contiene los ficheros php que se encargan hacer de intermediarios entre las vist
 
 Contiene los ficheros php que se encargan de la interfaz grafica para el usuario. No tienen logica de negocio, su función principal es renderizar el HTML.
 
-### Resoources
+### Resources
 
 Contiene los recursos estáticos que necesita este proyecto web: css, js, imagenes,etc.
