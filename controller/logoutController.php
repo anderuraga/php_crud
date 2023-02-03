@@ -4,7 +4,8 @@
     session_start();
     session_destroy();
 
-    // volvemos al index.php
-    $msg = "Hasta la vista";
-    header("Location: index.php?msg=".$msg."&tipo=primary");
+     // Ir al index.php
+     $msg = "Agur, hasta el proximo dia";
+     $tipo = "primary";
+     require('../index.php');
 ?>

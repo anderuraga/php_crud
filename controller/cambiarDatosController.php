@@ -3,7 +3,7 @@ session_start();
 require_once("bd/modeloUsuario.php");
 
 /**
- * Controlador para cambiar la datos del usuario* 
+ * Controlador para cambiar la datos del usuario 
  */
 
 

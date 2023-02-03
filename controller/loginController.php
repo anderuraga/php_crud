@@ -15,14 +15,18 @@ if ( $usuario != null )
 
     // Ir al index.php
     $msg = "Ongi Etorri";
-    header("Location: ".base_url()."view/frontoffice.php?msg=".$msg."&tipo=primary");
+    $tipo = "primary";
+    require('../view/frontoffice.php');
+   
 }
 else
 {
     $_SESSION['usuario'] = null;
+
     // volver a login.php
     $msg = "Por favor intentelo de nuevo";
-    header("Location: ".base_url()."view/login.php?msg=".$msg."&tipo=warning");
+    $tipo = "warning";
+    require('../view/login.php');
 }
 
 

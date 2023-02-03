@@ -38,7 +38,7 @@
             <?php echo $_SESSION['usuario']['nombre'] ?>,
             <?php echo $_SESSION['usuario']['apellidos'] ?>
           </p>
-          <img class="rounded-circle avatar" alt="avatar " src="https://www.fakepersongenerator.com/Face/male/male1085267201264.jpg" />
+          <img class="rounded-circle avatar" alt="avatar " src="<?php echo $URL_WEB ?>resources/images/avatar1.jpg" />
           <a href="<?php echo $URL_WEB ?>controller/logoutController.php" class="btn btn-outline-danger">Cerrar Sesión</a>
         </div>  
       <?php

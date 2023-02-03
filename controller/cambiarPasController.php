@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once("bd/modeloUsuario.php");
+require_once("../modelo/modeloUsuario.php");
 
 /**
  * Controlador para cambiar la contraseña del usuario* 
@@ -49,6 +49,7 @@ else
     
 }
 
-header("Location: frontoffice.php?msg=".$msg."&tipo=".$tipo);
+// Ir al frontoffice
+require('../view/frontoffice.php');
 
 ?>
