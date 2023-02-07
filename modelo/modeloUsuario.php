@@ -47,6 +47,29 @@ class ModeloUsuario {
     }// cambiarPass
 
 
+ /**
+     * Actualiza nombre y apellidos para un usuario
+     * retorna true si la cambia
+     * retorna false si NO la cambia
+     */
+    public static function cambiarDatos( $idUsuario, $nombre, $apellidos ){
+        include 'conexion.php';
+        $sql = " UPDATE `usuarios` 
+                 SET `nombre` = '".$nombre."', 
+                     `apellidos` = '".$apellidos."' 
+                 WHERE `usuarios`.`id` = ".$idUsuario.";                 
+                ";
+          
+        $conn->query($sql);  
+        if ( $conn->affected_rows == 1 ){
+            return true;
+        }else{
+            return false;
+        }
+       
+        
+    }// cambiarDatos
+
 
     /**
      * Inserta un nuevo usuario
