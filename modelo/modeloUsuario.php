@@ -47,5 +47,31 @@ class ModeloUsuario {
     }// cambiarPass
 
 
+
+    /**
+     * Inserta un nuevo usuario
+     * retorna true si crea nuevo usuario
+     * retorna false si falla
+     */
+    public static function insert( $nombre, $apellidos, $nick, $pass ){
+        include 'conexion.php';
+        $sql = " INSERT INTO `usuarios` 
+                 (`nombre`, `apellidos`, `nick`, `pass`) 
+                 VALUES 
+                 ('".$nombre."', '".$apellidos."', '".$nick."', '".$pass."');
+               ";
+
+        $conn->query($sql);  
+
+        if ( $conn->affected_rows == 1 ){
+            return true;
+        }else{
+            return false;
+        }
+        
+    }// insert
+
+
+
 }
 ?>
