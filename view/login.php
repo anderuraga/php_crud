@@ -21,8 +21,11 @@
         </div>
         
         <button type="submit" class="btn btn-primary">Iniciar</button>
+        <a href="<?php echo $URL_WEB ?>view/registro.php">¿Quieres darte de alta?</a>
     </form>
 </div>
+
+
 
 
 <?php include 'includes/footer.php' ?>
