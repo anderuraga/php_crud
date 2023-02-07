@@ -2,8 +2,8 @@
 
 // parametros conexion
 $servername = "localhost";
-$username = "php";
-$password = "qwertyuiop88P_";
+$username = "root";
+$password = "";
 $dbname = "uf1845";
 
 
