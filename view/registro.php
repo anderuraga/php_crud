@@ -10,16 +10,16 @@ include 'includes/alerta.php';
     <form action="<?php echo $URL_WEB ?>controller/registroController.php" method="post">
         <div class="mb-3">
             <label class="form-label">Nombre</label>
-            <input value="" type="text" class="form-control" name="nom" palceholder="Tu nombre Completo">            
+            <input value="<?php echo (isset($nombre)) ? $nombre : ""  ?>" type="text" class="form-control" name="nom" palceholder="Tu nombre Completo">            
         </div>
         <div class="mb-3">
             <label class="form-label">Apellidos</label>
-            <input value="" type="text" class="form-control" name="apes" palceholder="Tus dos apellidos">            
+            <input value="<?php echo (isset($apellidos)) ? $apellidos : ""  ?>" type="text" class="form-control" name="apes" palceholder="Tus dos apellidos">            
         </div>
               
         <div class="mb-3">
             <label class="form-label">Nick</label>
-            <input value="" type="text" class="form-control" name="nick" palceholder="Nick o nombre de usuario">            
+            <input value="<?php echo (isset($nick)) ? $nick : ""  ?>" type="text" class="form-control" name="nick" palceholder="Nick o nombre de usuario">            
         </div>
         <div class="mb-3">
             <label class="form-label">Contraseña</label>
