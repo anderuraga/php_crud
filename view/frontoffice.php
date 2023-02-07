@@ -1,5 +1,5 @@
 <?php 
-session_start();
+
 include 'includes/cabecera.php'; 
 include 'includes/navbar.php';
 include 'includes/alerta.php';
