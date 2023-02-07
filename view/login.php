@@ -5,7 +5,7 @@
 <div class="bg-light p-5 rounded">
     <form action="<?php echo $URL_WEB ?>controller/loginController.php" method="post">
         <div class="mb-3">
-            <label class="form-label">Nombre</label>
+            <label class="form-label">Nick</label>
             <input value="" 
                 type="text" class="form-control" 
                 name="nom">

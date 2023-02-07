@@ -4,10 +4,10 @@ require_once("../modelo/modeloUsuario.php");
 
 
 // recoger parametros del formulario
-$nom = $_POST['nom'];
+$nick = $_POST['nom'];
 $pwd = $_POST['pwd'];
 
-$usuario = ModeloUsuario::login( $nom, $pwd );
+$usuario = ModeloUsuario::login( $nick, $pwd );
 if ( $usuario != null )
 {
     // guardar el usuario en session        
