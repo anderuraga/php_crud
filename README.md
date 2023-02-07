@@ -15,6 +15,11 @@ Projecto PHP para aprender ha ralizar un CRUD contra una base datos de MySQL.
 ```
     $URL_WEB = "/php_crud/";
 ```
+CUIDADO: todos los enlaces de las vistas es mejor que comiencen con esta varibale, ejempplo:
+```
+<a href="<?php echo $URL_WEB ?>view/ejercicios/ejercicio1.php">ejemplo</a>
+```
+
 4. [Abrir PHPMyAdmin](http://localhost/phpmyadmin) y crear la base de datos **uf1845**
 5. si quieres usar otro nombre de base datos o usuarios puedes cambiarlo en el fichero **modelo/conexion.php**
 
