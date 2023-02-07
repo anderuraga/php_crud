@@ -16,7 +16,7 @@
           <a class="nav-link " href="<?php echo $URL_WEB ?>view/ejercicios/ejercicio2.php">Cookies</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?php echo $URL_WEB ?>view/ejercicios/ejercicio3.php">Tabla</a>
+          <a class="nav-link" href="<?php echo $URL_WEB ?>controller/listaController.php">Lista usuarios</a>
         </li>
       </ul>
 

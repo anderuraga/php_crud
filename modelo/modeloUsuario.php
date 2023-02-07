@@ -94,7 +94,22 @@ class ModeloUsuario {
         
     }// insert
 
+    public static function listar (){
+        
+        $usuarios = [];
+        include 'conexion.php';
+        $sql = "SELECT id, nombre, apellidos, nick FROM `usuarios` ORDER BY  nombre, apellidos ASC LIMIT 500; ";       
+        $result = $conn->query($sql);
 
+        if ($result->num_rows > 0) {
+        // recorremos uno a uno todos los resultados de cada fila == $row
+            while($row = $result->fetch_assoc()) {
+                array_push($usuarios, $row);
+            }
+        }
+        return $usuarios;
+        
+    }// listar
 
 }
 ?>
