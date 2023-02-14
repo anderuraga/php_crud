@@ -94,6 +94,9 @@ class ModeloUsuario {
         
     }// insert
 
+    /**
+     * Consulta la tabla de usuarios y retorna un array con todos ordenados por nombre y apellidos asc. 
+     */
     public static function listar (){
         
         $usuarios = [];
