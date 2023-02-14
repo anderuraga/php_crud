@@ -6,18 +6,38 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav me-auto mb-2 mb-md-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="<?php echo $URL_WEB ?>index.php">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="<?php echo $URL_WEB ?>view/ejercicios/ejercicio1.php">Sesiones</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="<?php echo $URL_WEB ?>view/ejercicios/ejercicio2.php">Cookies</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="<?php echo $URL_WEB ?>controller/listaController.php">Lista usuarios</a>
-        </li>
+
+      <?php 
+          // Solo pueden ver estos enlaces los Usuarios NO Logeados        
+          if (!isset($_SESSION['usuario'])) {
+        ?>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="<?php echo $URL_WEB ?>index.php">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo $URL_WEB ?>view/ejercicios/ejercicio1.php">Sesiones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="<?php echo $URL_WEB ?>view/ejercicios/ejercicio2.php">Cookies</a>
+          </li>
+
+        <?php } ?>   
+
+        <?php 
+          // Solo pueden ver estos enlaces los Usuarios Logeados        
+          if (isset($_SESSION['usuario'])) {
+        ?>
+
+            <li class="nav-item">
+              <a class="nav-link" href="<?php echo $URL_WEB ?>controller/listaController.php">Todos los Usuarios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<?php echo $URL_WEB ?>view/frontoffice.php">Tu Panel</a>
+            </li>
+
+         <?php } ?>   
+
       </ul>
 
 
@@ -32,12 +52,7 @@
         // Usuario Logeado
         }else {
       ?>
-        <div class="user-info mr-2 ml-2 p-2">
-          <a href="<?php echo $URL_WEB ?>view/frontoffice.php" class="btn btn-link">Tu Panel</a>
-          <p class="text-danger">
-            <?php echo $_SESSION['usuario']['nombre'] ?>,
-            <?php echo $_SESSION['usuario']['apellidos'] ?>
-          </p>
+        <div class="user-info mr-2 ml-2 p-2">         
           <img class="rounded-circle avatar" alt="avatar " src="<?php echo $URL_WEB ?>resources/images/avatar1.jpg" />
           <a href="<?php echo $URL_WEB ?>controller/logoutController.php" class="btn btn-outline-danger">Cerrar Sesión</a>
         </div>  
