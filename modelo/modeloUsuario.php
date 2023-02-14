@@ -94,6 +94,25 @@ class ModeloUsuario {
         
     }// insert
 
+
+    /**
+     * Elimina un usuario de la tabla por su id
+     */
+    public static function eliminar( $id ){
+        include 'conexion.php';
+        $sql = " DELETE FROM usuarios WHERE `id` = ".$id." ; ";
+
+        $conn->query($sql);  
+
+        if ( $conn->affected_rows == 1 ){
+            return true;
+        }else{
+            return false;
+        }
+        
+    }// eliminar
+
+
     /**
      * Consulta la tabla de usuarios y retorna un array con todos ordenados por nombre y apellidos asc. 
      */
