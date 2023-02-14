@@ -12,8 +12,8 @@
         <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">Nombre</th>
-              <th scope="col">Apellidos</th>            
+              <th scope="col">Nick</th>
+              <th scope="col">Nombre Completo</th>            
             </tr>
         </thead>
         <tbody>
@@ -23,8 +23,8 @@
                   ?>
                     <tr>
                         <td> <?php echo $user["id"] ?> </td>
-                        <td> <?php echo $user["nombre"] ?></td>
-                        <td> <?php echo $user["apellidos"] ?></td>
+                        <td> <?php echo $user["nick"] ?> </td>
+                        <td> <?php echo $user["nombre"] ?>, <?php echo $user["apellidos"] ?></td>
                     </tr>
 
                   <?php   
